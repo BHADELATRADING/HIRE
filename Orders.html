@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bhadela Trading</title>
+        <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        } */
+
+        body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+/* Header Styling */
+header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+
+        header small {
+            font-size: 18px;
+            color: #888;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Search Styling */
+        .search-bar {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .search-bar input {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        
+        /* Navigation Styling */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        nav li {
+            display: inline;
+            padding: 8px 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+        .OrderPallete {
+            background-color: #fff;
+            width: 90%;
+            max-width: 800px;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .OrderPallete h1,
+        .OrderPallete h2 {
+            color: #444;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .OrderPallete h1 {
+            color: #d4af37;
+            font-size: 1.8em;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="date"] {
+            padding: 10px;
+            width: calc(100% - 120px);
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #Reference {
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #b59530;
+        }
+
+        .MainItems {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .MainItems figure {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .MainItems figure:hover {
+            transform: scale(1.1);
+        }
+
+        .MainItems img {
+            width: 100px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        table input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+                /* Mobile Phones (Portrait) - up to 600px */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header small {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .search-bar input {
+        width: 150px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        padding: 6px 10px;
+    }
+
+    .About, .WhyUs {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 24px;
+    }
+
+    .About img {
+        max-height: 250px;
+    }
+}
+
+/* Tablets (Portrait) - 600px to 768px */
+@media (min-width: 600px) and (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    header small {
+        font-size: 18px;
+    }
+
+    header img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-bar input {
+        width: 180px;
+    }
+
+    .About, .WhyUs {
+        padding: 30px;
+        font-size: 15px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 28px;
+    }
+
+    .About img {
+        max-height: 300px;
+    }
+}
+
+/* Tablets (Landscape) - 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    header img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-bar input {
+        width: 200px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .About, .WhyUs {
+        padding: 35px;
+        max-width: 900px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 30px;
+    }
+}
+
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        margin-top: 0;
+    }
+
+    .About, .WhyUs {
+        padding: 40px;
+        max-width: 1000px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 32px;
+    }
+}
+
+    </style>
+        <script>
+        function ClientHandle() {
+            let Client = {
+                name: document.getElementById("name").value,
+                surname: document.getElementById("Surname").value,
+                cellphone: document.getElementById("cellphone").value,
+                reference: function () {
+                    let part1 = this.name.slice(0, 1);
+                    let part2 = this.surname.slice(0, 3);
+                    let part3 = this.cellphone.slice(-4);
+                    let final = part1.toUpperCase() + part2.toUpperCase() + part3;
+                    document.getElementById("Reference").innerHTML = final;
+                }
+            };
+            Client.reference();
+        }
+
+        function CheckIfFilled() {
+            let name = document.getElementById("name").value;
+            let surname = document.getElementById("Surname").value;
+            let cellphone = document.getElementById("cellphone").value;
+            if (!name || !surname || !cellphone) {
+                alert("Please fill in all fields and generate a reference number.");
+                return false;
+            }
+            return true;
+        }
+
+        function calculatePrice(itemId, quantityId, pricePerUnit) {
+            let quantity = parseInt(document.getElementById(quantityId).value) || 0;
+            document.getElementById(itemId).innerHTML = "R" + (quantity * pricePerUnit);
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            const prices = ["Item1price", "Item2price", "Item3price"];
+            let total = prices.reduce((acc, item) => {
+                const price = parseFloat(document.getElementById(item).innerText.slice(1)) || 0;
+                return acc + price;
+            }, 0);
+            document.getElementById("TotalPrice").innerText = "R" + total;
+        }
+
+        function submitOrder() {
+    if (CheckIfFilled()) {
+        const reference = document.getElementById("Reference").innerText;
+        const total = document.getElementById("TotalPrice").innerText;
+        const name = document.getElementById("name").value;
+        const surname = document.getElementById("Surname").value;
+        const cellphone = document.getElementById("cellphone").value;
+        const eventDate = document.getElementById("date").value;
+        const location = document.getElementById("location").value;
+        const qty1 = document.getElementById("item1Qty").value || 0;
+        const qty2 = document.getElementById("item2Qty").value || 0;
+        const qty3 = document.getElementById("item3Qty").value || 0;
+
+        const subject = `Order Reference: ${reference}`;
+        const body = `
+        Order Details:
+        Name: ${name} ${surname}
+        Cellphone: ${cellphone}
+        Event Date: ${eventDate}
+        Location: ${location}
+
+        Items Ordered:
+        - Mobile Fridge: ${qty1} x R2000
+        - Chairs: ${qty2} x R10
+        - 2-Pole Tent: ${qty3} x R1000
+
+        Total Price: ${total}
+
+        Reference: ${reference}
+        `;
+
+        // Open default email app
+        alert("Order Noted, The website will proceed to your default mailing app.Please be patient");
+        const mailtoLink = `mailto:andagwele1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    }
+}
+
+    </script>
+    </head>
+    <body>
+        <header>
+            <img src="emblem.jpg" alt="Emblem">
+            <h1>Bhadela Trading & Projects</h1>
+            <small>The Best In Town</small>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Prices.html">Prices</a></li>
+                <li><a href="events.html">Past Events</a></li>
+                <li><a href="#">Orders</a></li>
+            </ul>
+        </nav>
+
+        <section class="OrderPallete">
+            <h1>Place Your Order</h1>
+
+            <form id="orderForm" onsubmit="submitOrder(); return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" oninput="ClientHandle()" required>
+
+                <label for="Surname">Surname:</label>
+                <input type="text" id="Surname" oninput="ClientHandle()"
+                    required>
+
+                <label for="cellphone">Cellphone:</label>
+                <input type="tel" id="cellphone" oninput="ClientHandle()"
+                    required>
+
+                <h2>Your Order Reference: <span id="Reference"></span></h2>
+                <h2>Total Price: <span id="TotalPrice">R0</span></h2>
+
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>Mobile Fridge</td>
+                        <td>R2000</td>
+                        <td><input type="number" id="item1Qty" min="0"
+                                oninput="calculatePrice('Item1price', 'item1Qty', 2000)"></td>
+                        <td id="Item1price">R0</td>
+                    </tr>
+                    <tr>
+                        <td>Chairs</td>
+                        <td>R10</td>
+                        <td><input type="number" id="item2Qty" min="0"
+                                oninput="calculatePrice('Item2price', 'item2Qty', 10)"></td>
+                        <td id="Item2price">R0</td>
+                    </tr>
+                    <tr>
+                        <td>2-Pole Tent</td>
+                        <td>R1000</td>
+                        <td><input type="number" id="item3Qty" min="0"
+                                oninput="calculatePrice('Item3price', 'item3Qty', 1000)"></td>
+                        <td id="Item3price">R0</td>
+                    </tr>
+                </table>
+
+                <label for="date">Select Event Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="date">Enter your location:</label>
+                <input type="text" id="location" required>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </body>
+</html>

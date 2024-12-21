@@ -1,0 +1,107 @@
+<script type = text/javascript>
+    function tent(){
+        document.getElementById("Item1").innerHTML = "Tent";
+        document.getElementtById("Item1quant").innerHtml = 1;
+    }
+    function $tent(){
+        console.log("worked");
+        console.log(document.getElementById("Item1quant").value);
+        document.getElementById("Item1price").innerHTML ="R" + (parseInt(document.getElementById("Item1quant").value )* parseInt(600));
+    }
+    function chairs(){
+        document.getElementById("Item2").innerHTML = "Chairs";
+        document.getElementById("Item2quant").innerHTML = 1;
+       
+    }
+    function $chairs(){
+        console.log("worked");
+        document.getElementById("Item2price").innerHTML = "R" +  ( document.getElementById("Item2quant").value * parseInt(5));
+    }
+    function fridge(){
+        document.getElementById("Item3").innerHTML= "MobileFridge";
+        document.getElementById("Item3quant").innerHTML = 1;
+        
+    }
+    function $fridge(){
+        console.log("worked");
+        document.getElementById("Item3price").innerHTML = "R" + (document.getElementById("Item3quant").value * parseInt(1200));
+    
+        
+    }
+    
+
+
+
+</script>
+
+
+<section class = "OrderPallete">
+        <h1>SELECT ITEMS</h1> <br>
+        <section class = "MainItems">
+        <figure>
+            <figcaption>Two pole -Tent</figcaption>
+            <img src = "Tent2.jpg" alt = "Tent" onclick = "tent()">
+
+            
+        </figure>
+        <figure>
+            <figcaption>Chairs</figcaption>
+            <img src = "Tent.jpg" alt = "Chairs" onclick = "chairs()">
+        </figure>
+        <figure>
+            <figcaption>Mobile Fridge</figcaption>
+            <img src = "fridge.webp" alt = "Mobile Fridge" onclick= "fridge()" >
+        </figure>
+    </section>
+    <section class = "additives">
+        <figure>
+            <figcaption>Two pole -Tent</figcaption>
+            <img src = "Tent2.jpg" alt = "Tent" onclick = "">
+            
+        </figure>
+        <figure>
+            <figcaption>Chairs</figcaption>
+            <img src = "Tent.jpg" alt = "Chairs" onclick="">
+        </figure>
+        <figure>
+            <figcaption>Mobile Fridge</figcaption>
+            <img src = "fridge.webp" alt = "Mobile Fridge" onclick="">
+        </figure>
+    </section>
+    <section class = "total">
+        <h1>Your Items</h1>
+     <hr>
+     <table>
+        <thead>
+            <tr>
+                
+                <th>ITEM</th>
+                <th>QUANTITY</th>
+            
+            </tr>
+        </thead>
+
+        <tr>
+            <td id = "Item1"></td>
+            <td ><input type = "number" id = "Item1quant" ></td> 
+            
+        </tr>
+        <tr>
+            <td id = "Item2"></td>
+            <td ><input type = "number"  id = "Item2quant"></td>
+            
+        </tr>
+        <tr>
+            <td id = "Item3"></td>
+            <td ><input type = "number" id = "Item3quant">
+             </td>
+        
+        </tr>
+     </table>
+     <button value = "Submit"> Submit</button>
+     trade6Moshal@
+    </section>
+
+
+
+    </section>

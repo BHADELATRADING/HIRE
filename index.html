@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bhadela Trading Hire</title>
+        <link rel="icon" type="image/jpg" href="Bhire emblem.jpg">
+        <style>
+        /* Base Styling */
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: yellow;
+    text-align: center;
+}
+/* Header Styling */
+header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+
+        header small {
+            font-size: 18px;
+            color: #888;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Search Styling */
+        .search-bar {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .search-bar input {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        
+        /* Navigation Styling */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        nav li {
+            display: inline;
+            padding: 8px 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Section Styling */
+        .About, .WhyUs {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .About h1, .WhyUs h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .About h3 {
+            font-size: 24px;
+            color: #666;
+            margin-top: 20px;
+        }
+        
+        .About p, .WhyUs p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .About img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer small {
+            color: #aaa;
+        }
+
+        /* Mobile Phones (Portrait) - up to 600px */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header small {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .search-bar input {
+        width: 150px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        padding: 6px 10px;
+    }
+
+    .About, .WhyUs {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 24px;
+    }
+
+    .About img {
+        max-height: 250px;
+    }
+}
+
+/* Tablets (Portrait) - 600px to 768px */
+@media (min-width: 600px) and (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    header small {
+        font-size: 18px;
+    }
+
+    header img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-bar input {
+        width: 180px;
+    }
+
+    .About, .WhyUs {
+        padding: 30px;
+        font-size: 15px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 28px;
+    }
+
+    .About img {
+        max-height: 300px;
+    }
+}
+
+/* Tablets (Landscape) - 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    header img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-bar input {
+        width: 200px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .About, .WhyUs {
+        padding: 35px;
+        max-width: 900px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 30px;
+    }
+}
+
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        margin-top: 0;
+    }
+
+    .About, .WhyUs {
+        padding: 40px;
+        max-width: 1000px;
+    }
+
+    .About h1, .WhyUs h1 {
+        font-size: 32px;
+    }
+}
+footer {
+    background-color:  #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info, .footer-social, .footer-links {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-info h3, .footer-social h3, .footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-info p, .footer-links ul, .footer-social ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-social ul li {
+    margin: 5px 0;
+}
+
+.footer-links a, .footer-social a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+footer{
+    text-decoration: none;
+    color: #007bff;
+}
+.hero {
+  position: relative;
+  background: url('coo.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+    </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <img id="Emblem" src="emblem.jpg" alt="Emblem">
+            <h1>Bhadela Trading & Projects</h1>
+            <small>The Best In Town</small>
+
+        </header>
+
+        <!-- Navigation Section -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Prices.html">Prices</a></li>
+                <li><a href="events.html">Past Events</a></li>
+                <li><a href="Orders.html">Orders</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <div class="overlay">
+                <h1>Trust us to do the work</h1>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="About">
+            <h1>Your Event Oasis!</h1>
+            <p>We believe that every event is a unique story waiting to be told,
+                and we're here to provide the perfect setting for your
+                narrative. As a budding business dedicated to transforming
+                ordinary gatherings into extraordinary memories, we proudly
+                offer a curated selection of tents, chairs, and mobile fridges
+                for hire.</p>
+
+            <h3>🏕 Tents for Every Occasion</h3>
+            <p>Whether you're planning an intimate garden soirée, a corporate
+                retreat, or a grand wedding celebration, our diverse range of
+                tents is designed to suit any event size or theme. From classic
+                elegance to contemporary chic, our tents provide the canvas for
+                your vision to come to life.</p>
+
+            <h3>🪑 Chairs That Complement</h3>
+            <p>Our collection of chairs is more than just seating; it's an
+                extension of your style. Comfortable, stylish, and versatile,
+                our chairs add the finishing touch to your event's ambiance.
+                From sleek modern designs to timeless classics, we have the
+                perfect chairs to elevate your guests' experience.</p>
+
+            <h3>🧊 Chill with Convenience</h3>
+            <p>No event is complete without refreshments. Our mobile fridges
+                ensure that your beverages stay cool and your guests stay
+                refreshed. Portable and efficient, these fridges are the perfect
+                companion for any outdoor gathering, ensuring your drinks are
+                always at the perfect temperature.</p>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="WhyUs">
+            <h1>Why Choose Us?</h1>
+            <p>Quality Assurance: Our equipment is meticulously maintained to
+                the highest standards, ensuring that your event runs smoothly
+                without a hitch.<br>
+                Personalized Service: We understand that each event is unique.
+                Our team is dedicated to working closely with you to tailor our
+                offerings to match your specific needs and preferences.<br>
+                Reliability: You can count on us to deliver and set up on time,
+                allowing you to focus on what matters most - creating
+                unforgettable moments.</p>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a
+                            href="mailto:info@example.com">bhadelatradinghire1@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+27 64 789 8126">064 789 8126</a></p>
+                    <p>Phone: <a href="tel:+27 72 873 3484">07 873 3484</a></p>
+                    <p>Address: Mdanstane nu9</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com"
+                                target="_blank">Facebook</a></li>
+                        <li><a href="https://www.twitter.com"
+                                target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com"
+                                target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms and Conditions
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <small>&copy; 2024 Bhadela Trading & Projects. All
+                            rights
+                            reserved.</small>
+                    </div>
+                </footer>
+
+            </body>
+        </html>

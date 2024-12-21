@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tic Tac Toe</title>
+        <style type="text/css">
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .Playeridentification {
+            border: 2px solid blue;
+            padding: 10px 30px;
+            margin-bottom: 50px;
+            display: flex;
+            gap: 100px;
+            background-color: #e6f2ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #Player, #Computer {
+            border: 2px solid blue;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            width: 330px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .cell {
+            border: 2px solid #333;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cell:hover {
+            background-color: #f9f9f9;
+        }
+        .cell:active {
+            background-color: grey;
+        }
+    </style>
+    </head>
+    <body>
+        <article class="Playeridentification">
+            <div id="Player">Player</div>
+            <div id="Computer">Player2</div>
+        </article>
+        <section>
+            <div id="cell1" class="cell"></div>
+            <div id="cell2" class="cell"></div>
+            <div id="cell3" class="cell"></div>
+            <div id="cell4" class="cell"></div>
+            <div id="cell5" class="cell"></div>
+            <div id="cell6" class="cell"></div>
+            <div id="cell7" class="cell"></div>
+            <div id="cell8" class="cell"></div>
+            <div id="cell9" class="cell"></div>
+        </section>
+        <script>
+        // Counter to keep track of turns
+        let playcount = 0;
+
+        // Function to draw X
+        function drawX(cellId) {
+            document.getElementById(cellId).innerText = 'X';
+        }
+
+        // Function to draw O
+        function drawO(cellId) {
+            document.getElementById(cellId).innerText = 'O';
+        }
+
+        // Function to handle cell click
+        function handleCellClick(event) {
+            const cellId = event.target.id;
+            if (playcount % 2 == 0) {
+                drawX(cellId);
+            } else {
+                drawO(cellId);
+            }
+
+            playcount++;
+            event.target.removeEventListener('click', handleCellClick); // Disable further clicks on this cell
+
+            if (playcount >= 5) { // Check for a win only after the 5th move
+                WinCheck();
+            }
+        }
+
+        // Function to check for a win
+        function WinCheck() {
+            const winPatterns = [
+                ['cell1', 'cell2', 'cell3'], // Row 1
+                ['cell4', 'cell5', 'cell6'], // Row 2
+                ['cell7', 'cell8', 'cell9'], // Row 3
+                ['cell1', 'cell4', 'cell7'], // Column 1
+                ['cell2', 'cell5', 'cell8'], // Column 2
+                ['cell3', 'cell6', 'cell9'], // Column 3
+                ['cell1', 'cell5', 'cell9'], // Diagonal 1
+                ['cell3', 'cell5', 'cell7']  // Diagonal 2
+            ];
+
+            for (let pattern of winPatterns) {
+                const [a, b, c] = pattern;
+                if (document.getElementById(a).innerText !== '' &&
+                    document.getElementById(a).innerText === document.getElementById(b).innerText &&
+                    document.getElementById(a).innerText === document.getElementById(c).innerText) {
+                    alert(`${document.getElementById(a).innerText} has won`);
+                    resetGame();
+                    return;
+                }
+            }
+
+            if (playcount === 9) {
+                alert("It's a tie!");
+                resetGame();
+            }
+        }
+
+        // Function to reset the game
+        function resetGame() {
+            playcount = 0;
+            let cells = Array.from(document.querySelectorAll('.cell'));
+            for (let cell of cells) {
+                cell.innerText = '';
+                cell.addEventListener('click', handleCellClick);
+            }
+        }
+
+        // Adding event listeners to all cells
+        let cells = Array.from(document.querySelectorAll('.cell'));
+        for (let cell of cells) {
+            cell.addEventListener('click', handleCellClick);
+        }
+    </script>
+    </body>
+</html>

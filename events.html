@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coming Soon</title>
+        <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    color: yellow;
+    text-align: center;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: yellow;
+    text-align: center;
+}
+/* Header Styling */
+header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+
+        header small {
+            font-size: 18px;
+            color: #888;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Search Styling */
+        .search-bar {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .search-bar input {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        
+        /* Navigation Styling */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        nav li {
+            display: inline;
+            padding: 8px 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+
+.container {
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.coming-soon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.countdown {
+    font-size: 20px;
+}
+/* General Tablet Screen Adjustments */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .coming-soon {
+        font-size: 36px;
+    }
+
+    .message {
+        font-size: 20px;
+    }
+
+    .countdown {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header small {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .coming-soon {
+        font-size: 30px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+
+    .countdown {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header small {
+        font-size: 14px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .coming-soon {
+        font-size: 24px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .countdown {
+        font-size: 14px;
+    }
+}
+
+
+        </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <img id="Emblem" src="emblem.jpg" alt="Emblem">
+            <h1>Bhadela Trading & Projects</h1>
+            <small>The Best In Town</small>
+        </header>
+
+        <!-- Navigation Section -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Prices.html">Prices</a></li>
+                <li><a href="#">Past Events</a></li>
+                <li><a href="Orders.html">Orders</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1 class="coming-soon">Coming Soon</h1>
+            <p class="message">We're working hard to get this page ready. Stay
+                tuned!</p>
+            <div class="countdown">
+                <p id="countdown-timer"></p>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a
+                            href="mailto:info@example.com">bhadelatradinghire1@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+27 64 789 8126">064 789 8126</a></p>
+                    <p>Phone: <a href="tel:+27 72 873 3484">07 873 3484</a></p>
+                    <p>Address: Mdanstane nu9</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com"
+                                target="_blank">Facebook</a></li>
+                        <li><a href="https://www.twitter.com"
+                                target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com"
+                                target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms and Conditions
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <small>&copy; 2024 Bhadela Trading & Projects. All
+                            rights
+                            reserved.</small>
+                    </div>
+                </footer>
+
+                <script>
+            // Set the date for the countdown
+const countdownDate = new Date("2024-12-31T00:00:00").getTime();
+
+// Update the countdown every second
+const countdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    // Time calculations
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the countdown-timer element
+    document.getElementById("countdown-timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown-timer").innerHTML = "We're live!";
+    }
+}, 1000);
+
+        </script>
+            </body>
+        </html>
